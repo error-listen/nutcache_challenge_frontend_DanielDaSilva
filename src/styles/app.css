@@ -1,0 +1,225 @@
+.employees{
+    padding: 10px;
+}
+
+.employees .employees_header{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.employees .employees_header button{
+    border: none;
+    padding: 8px;
+    background-color: #7CE0D3;
+    border-radius: 5px;
+    font-weight:600;
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+}
+
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.ripple:hover {
+    background: #FFFFFF66 radial-gradient(circle, transparent 1%, #FFFFFF66 1%) center/15000%;
+}
+
+.ripple:active {
+    background-color: #FFFFFF66;
+    background-size: 100%;
+    transition: background 0s;
+}
+  
+.employees .employees_table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.employees .employees_table th {
+    border-bottom: 1px solid #DDDDDD;
+    padding: 10px;
+    font-size: 13px;
+    color: #A9A9A9;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+
+.employees .employees_table td{
+    border-bottom: 1px solid #DDDDDD;
+    padding: 10px;
+    font-size: 13px;
+    color: #A9A9A9;
+    font-weight: bold;
+}
+
+.employees .employees_table td .name_and_email{
+    display: flex;
+    flex-direction: column;
+}
+
+.employees .employees_table td .name_and_email p:first-child{
+    color: #000000;
+}
+
+.employees .employees_table td .name_and_email p:last-child{
+    color: #A9A9A9
+}
+
+.employees .employees_table td .team{
+    background-color: #7CE0D333;
+    width: 80px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: #7CE0D3;
+}
+
+.employees .employees_table td button{
+   border: none;
+   background-color: #FFFFFF;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   cursor: pointer;
+   font-size: 20px;
+   float: right;
+   outline: none;
+}
+
+.employees .employees_table td .dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #F9F9F9;
+    min-width: 160px;
+    right: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.employees .employees_table td .dropdown_content span {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+  
+.employees .employees_table td .dropdown_content span:hover {
+    background-color: #7CE0D3;
+    color: #FFFFFF;
+}
+  
+.employees .employees_table td .dropdown:hover .dropdown_content {
+    display: block;
+}
+
+.employees .employees_table td .employees .employees_table td button:hover{
+    background-color: #DDDDDD;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    height: 50px;
+    margin-left: -125px;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 5px;
+    padding: 12px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 15px;
+    font-weight: bold;
+}
+  
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+  
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+  
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+  
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+  
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@media screen and (max-width: 740px) {
+    .employees .employees_table {
+      border: 0;
+      margin-top: 40px;
+    }
+  
+    .employees .employees_table thead {
+      display: none;
+    }
+  
+    .employees .employees_table tr {
+        display: block;
+        border-bottom: 2px solid #FFF;
+    }
+  
+    .employees .employees_table td {
+        display: block;
+        text-align: right;
+        border-bottom: 1px solid #DDDDDD;
+    }
+  
+    .employees .employees_table td:last-child {
+        margin-bottom: 30px;
+        border-bottom: 0;
+    }
+  
+    .employees .employees_table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
+
+    .employees .employees_table tr:nth-child(odd) {
+        background: #7CE0D330;
+    }
+
+    .employees .employees_table td:last-child{
+        border-bottom: 0;
+    }
+
+    .employees .employees_table .team_td{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .employees .employees_table td button{
+        background-color: #7CE0D310;
+    }
+}
+  
+  
